@@ -76,6 +76,32 @@ enum State {
     PENALISED     = 2;
 }
 
+/// The role of the robot
+enum Role {
+    ROLE_IDLING=0;
+    ROLE_OTHER=1;
+    ROLE_STRIKER=2;
+    ROLE_SUPPORTER=3;
+    ROLE_DEFENDER=4;
+    ROLE_GOALIE=5;
+}
+
+/// The current action of the robot
+enum Action {
+    ACTION_UNDEFINED=0;
+    ACTION_POSITIONING=1;
+    ACTION_GOING_TO_BALL=2;
+    ACTION_TRYING_TO_SCORE=3;
+    ACTION_WAITING=4;
+}
+
+/// The offensive strategy of the robot
+enum OffensiveSide {
+    SIDE_LEFT = 0;
+    SIDE_MIDDLE = 1;
+    SIDE_RIGHT = 2;
+}
+
 message Message {
     /// Timestamp of message creation
     google.protobuf.Timestamp timestamp = 1;
@@ -113,4 +139,25 @@ message Message {
 
     /// Maximum walking speed of the robot
     float max_walking_speed = 101;
+
+    /// Confidence value of the robots pose
+    float position_confidence = 102;
+
+    /// Confidence value of the ball
+    float ball_confidence = 103;
+
+    /// Time the robot needs to reach the ball;
+    float time_to_ball = 104;
+
+    /// The role of the robot
+    Role role = 105;
+
+    /// The current action of the robot
+    Action action = 106;
+
+    /// The offensive strategy of the robot
+    OffensiveSide offensive_side = 107;
+
+    /// Confidence values of the obstacles
+    repeated float obstacle_confidence = 108;
 }
