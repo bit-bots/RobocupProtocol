@@ -78,12 +78,13 @@ enum State {
 
 /// The role of the robot
 enum Role {
-    ROLE_IDLING=0;
-    ROLE_OTHER=1;
-    ROLE_STRIKER=2;
-    ROLE_SUPPORTER=3;
-    ROLE_DEFENDER=4;
-    ROLE_GOALIE=5;
+    ROLE_UNDEFINED = 0;
+    ROLE_IDLING=1;
+    ROLE_OTHER=2;
+    ROLE_STRIKER=3;
+    ROLE_SUPPORTER=4;
+    ROLE_DEFENDER=5;
+    ROLE_GOALIE=6;
 }
 
 /// The current action of the robot
@@ -97,9 +98,10 @@ enum Action {
 
 /// The offensive strategy of the robot
 enum OffensiveSide {
-    SIDE_LEFT = 0;
-    SIDE_MIDDLE = 1;
-    SIDE_RIGHT = 2;
+    SIDE_UNDEFINED = 0;
+    SIDE_LEFT = 1;
+    SIDE_MIDDLE = 2;
+    SIDE_RIGHT = 3;
 }
 
 message Message {
