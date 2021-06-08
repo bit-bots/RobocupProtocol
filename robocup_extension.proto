@@ -94,6 +94,9 @@ enum Action {
     ACTION_GOING_TO_BALL=2;
     ACTION_TRYING_TO_SCORE=3;
     ACTION_WAITING=4;
+    ACTION_KICKING=5;
+    ACTION_SEARCHING=6;
+    ACTION_LOCALIZING=7;
 }
 
 /// The offensive strategy of the robot
