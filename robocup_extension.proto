@@ -145,12 +145,6 @@ message Message {
     /// Maximum walking speed of the robot
     float max_walking_speed = 101;
 
-    /// Confidence value of the robots pose
-    float position_confidence = 102;
-
-    /// Confidence value of the ball
-    float ball_confidence = 103;
-
     /// Time the robot needs to reach the ball;
     float time_to_ball = 104;
 
@@ -164,5 +158,5 @@ message Message {
     OffensiveSide offensive_side = 107;
 
     /// Confidence values of the obstacles
-    repeated float obstacle_confidence = 108;
+    repeated float other_robot_confidence = 108;
 }
